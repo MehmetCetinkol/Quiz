@@ -4,8 +4,15 @@ echo "enter value of  n "
 read num
 if [ $((num%2)) -eq 0 ]
 then
-  echo "Value not perfect"
- 
+  for((i=num; i>=1; i--))
+ do
+  for((j=1; j<=i; j++))
+  do
+    echo -n "* "
+  done
+  echo
+done
+
 else
 for (( i=1;i<=$num ;i++))
 do
